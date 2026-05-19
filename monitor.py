@@ -21,8 +21,8 @@ class MonitorWidget(Static):
         text = (
             f"[b]CPU:[/b] {cpu}%\n"
             f"[b]RAM:[/b] {ram.percent}% ({format_bytes(ram.used)} / {format_bytes(ram.total)}\n"
-            f"[b]RAM:[/b] {disk.percent}% ({format_bytes(disk.used)} / {format_bytes(disk.total)}\n"
-            f"[b]RAM:[/b] {int(uptime_hours)} hours\n"
+            f"[b]DISK:[/b] {disk.percent}% ({format_bytes(disk.used)} / {format_bytes(disk.total)}\n"
+            f"[b]UPTIME:[/b] {int(uptime_hours)} hours\n"
         )
         self.update(text)
 
@@ -73,26 +73,3 @@ class SystemMonitor(App):
 if __name__ == "__main__":
     SystemMonitor().run()
 
-#    #left{
-#        width: 50%;
-#        padding: 2;
-#    }
-#    #right{
-#        width: 50%;
-#        padding: 2;
-#    }
-#
-#    Screen {
-#layout: horizontal;
- #   }
- #   Static {
-  #      border: round green;
-   #     padding: 1;
-        
-   # }
-
-#
-#
-#
-#
-#

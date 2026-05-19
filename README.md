@@ -1,19 +1,31 @@
-# System Monitor CLI
+# System Monitor TUI
+## Preview
+![System Monitor Screenshot](assets/screen.jpeg)
+Un monitor di sistema testuale scritto in Python utilizzando Textual, con pannelli dinamici per CPU, RAM, disco, uptime e processi.
 
-Un semplice monitor di sistema da terminale scritto in Python.
 
 ## Funzionalità
 - Utilizzo CPU
 - Utilizzo RAM
 - Utilizzo disco
-- Uptime
-- Top 5 processi per CPU
+- Uptime sistema
+- Top 6 processi per CPU
+
+## Tecnologie utilizzate
+python3
+Textual
+psutil
 
 ## Installazione
-```fish
-```fish 
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements
 ```
+## Utilizzo
+
+```bash
+python3 monitor.py
 ```
-```
-```
+Per uscire dal programma premere Ctrl + Q
