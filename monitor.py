@@ -19,8 +19,8 @@ class MonitorWidget(Static):
 
         text = (
             f"[b][green]CPU:[/b][/green] {cpu}%\n"
-            f"[b][yellow]RAM:[/b][/yellow] {ram.percent}% ({format_bytes(ram.used)} / {format_bytes(ram.total)}\n"
-            f"[b][pink]DISK:[/b][/pink] {disk.percent}% ({format_bytes(disk.used)} / {format_bytes(disk.total)}\n"
+            f"[b][yellow]RAM:[/b][/yellow] {ram.percent}% ({format_bytes(ram.used)} / {format_bytes(ram.total)})\n"
+            f"[b][pink]DISK:[/b][/pink] {disk.percent}% ({format_bytes(disk.used)} / {format_bytes(disk.total)})\n"
             f"[b][red]UPTIME:[/b][/red] {int(uptime_hours)} hours\n"
         )
         self.update(text)
@@ -34,9 +34,9 @@ class ProcessWidget(Static):
             psutil.process_iter(['pid','name','cpu_percent']),
             key=lambda p: p.info['cpu_percent'],
             reverse=True 
-        )[:6]
+        )[:10]
 
-        text = "[b][orange]Top 6 CPU Processes[/b][/orange]\n\n"
+        text = "[b][orange]Top 10 CPU Processes[/b][/orange]\n\n"
         for p in process:
             text += f"{p.info['pid']} - {p.info['name']} - {p.info['cpu_percent']}%\n"
     
