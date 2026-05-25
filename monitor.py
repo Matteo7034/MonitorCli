@@ -1,5 +1,4 @@
 import psutil
-import curses 
 import time
 from textual.app import App, ComposeResult
 from textual.containers import Horizontal, Vertical
