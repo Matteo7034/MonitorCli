@@ -18,10 +18,10 @@ class MonitorWidget(Static):
         uptime_hours = uptime_seconds // 3600
 
         text = (
-            f"[b]CPU:[/b] {cpu}%\n"
-            f"[b]RAM:[/b] {ram.percent}% ({format_bytes(ram.used)} / {format_bytes(ram.total)}\n"
-            f"[b]DISK:[/b] {disk.percent}% ({format_bytes(disk.used)} / {format_bytes(disk.total)}\n"
-            f"[b]UPTIME:[/b] {int(uptime_hours)} hours\n"
+            f"[b][green]CPU:[/b][/green] {cpu}%\n"
+            f"[b][yellow]RAM:[/b][/yellow] {ram.percent}% ({format_bytes(ram.used)} / {format_bytes(ram.total)}\n"
+            f"[b][pink]DISK:[/b][/pink] {disk.percent}% ({format_bytes(disk.used)} / {format_bytes(disk.total)}\n"
+            f"[b][red]UPTIME:[/b][/red] {int(uptime_hours)} hours\n"
         )
         self.update(text)
 
@@ -36,7 +36,7 @@ class ProcessWidget(Static):
             reverse=True 
         )[:6]
 
-        text = "[b]Top 6 CPU Processes[/b]\n\n"
+        text = "[b][orange]Top 6 CPU Processes[/b][/orange]\n\n"
         for p in process:
             text += f"{p.info['pid']} - {p.info['name']} - {p.info['cpu_percent']}%\n"
     
