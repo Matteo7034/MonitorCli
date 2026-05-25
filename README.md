@@ -1,4 +1,4 @@
-# System Monitor TUI
+# System Monitor mtop
 ## Preview
 ![System Monitor Screenshot](assets/screen.png)
 Un monitor di sistema testuale scritto in Python utilizzando Textual, con pannelli dinamici per CPU, RAM, disco, uptime e processi.
